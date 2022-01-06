@@ -1,0 +1,18 @@
+---
+- hosts: localhost
+  tasks:
+    # The below code takes care of creation of txt file
+    - name: Create file
+      ansible.builtin.file:
+        path: /home/ubuntu/tiw-b5.txt
+        state: touch
+
+    - name: Create directory
+      ansible.builtin.file:
+        path: /home/ubuntu/tiw-b5
+        state: directory
+
+    - name: Copy file
+      ansible.builtin.copy:
+        src: /home/ubuntu/tiw-b5.txt
+        dest: /home/ubuntu/tiw-b5/tiw-b5.txt
