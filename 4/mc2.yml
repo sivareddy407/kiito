@@ -1,7 +1,7 @@
 ---
 - hosts: localhost
   tasks:
-    #The below code takes care of creation of txt file
+    # The below code takes care of creation of txt file
     - name: Create file
       ansible.builtin.file:
         path: /home/ubuntu/tiw-b5.txt
